@@ -65,11 +65,11 @@ class App(QWidget):
         if buttonReply == QMessageBox.Yes:
             numOfWords = int(self.textbox1.text())
             delimiter = self.textbox2.text()
-            res = split_list(filename, './group', numOfWords, delimiter)
+            res = split_list(filename, 'group', numOfWords, delimiter)
             if res:
                 QMessageBox.about(
                     self, 'Splitted!', 'Splitted files are saved in group folder under current directory.')
-                open_dir('./group')
+                open_dir('group')
             else:
                 QMessageBox.about(
                     self, 'Failure!', 'Either word list cannot be loaded or wrong settings, please try again.')
@@ -106,7 +106,7 @@ def split_list(csvfile, savepath, numOfWords, delimiter):
 
 def open_dir(path):
     if platform.system() == "Windows":
-        subprocess.Popen(["explorer", "/select,", path])
+        subprocess.Popen(["explorer", path])
     elif platform.system() == "Darwin":
         subprocess.Popen(["open", path])
     else:
