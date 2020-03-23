@@ -11,7 +11,6 @@ mkl-random==1.0.2
 nautilus-terminal==3.2.3
 numpy==1.16.3
 pandas==0.24.2
-psutil==5.2.2
 pycodestyle==2.5.0
 pyflakes==2.1.1
 pylint==2.3.1
